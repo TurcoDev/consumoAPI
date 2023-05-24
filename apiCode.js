@@ -1,4 +1,4 @@
-
+// Consumo de API
 function api() {
   fetch('https://pokeapi.co/api/v2/pokemon/ditto')
   .then(response => response.json())
@@ -13,5 +13,23 @@ function api() {
 
 setTimeout(api(), 3000);
 
+
 console.log('Me imprimo primero');
+
+// scroll event
+window.onscroll = function() {
+  myFunction()
+};
+
+function myFunction() {
+  console.log(document.documentElement.scrollTop);
+  if (document.documentElement.scrollTop > 50) {
+    document.getElementById("myP").className = "test";
+    document.getElementById("picture").className = "image";
+  } else {
+    document.getElementById("myP").className = "";
+    document.getElementById("picture").className = "";
+  }
+}
+
 

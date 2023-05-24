@@ -1,6 +1,6 @@
 
-setTimeout(() => {
-fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+function api() {
+  fetch('https://pokeapi.co/api/v2/pokemon/ditto')
   .then(response => response.json())
   .then((data) => {
     // console.log(data);
@@ -8,7 +8,10 @@ fetch('https://pokeapi.co/api/v2/pokemon/ditto')
     // console.log(data.sprites.front_default);
     document.getElementById('name').innerText = data.name;
     document.getElementById('picture').src = data.sprites.front_default;
-})}, 3000);
+})
+}
+
+setTimeout(api(), 3000);
 
 console.log('Me imprimo primero');
 
